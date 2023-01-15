@@ -1,10 +1,10 @@
 .board {
     display: grid;
-    grid-template-columns: repeat(10, 60px);
-    grid-template-rows: repeat(10, 60px);
-    gap: 1.1px;
-    width: 620px;
-    height: 620px;
+    grid-template-columns: repeat(10, 8vmin);
+    grid-template-rows: repeat(10, 8vmin);
+    gap: 1.2px;
+    width: 82vmin;
+    height: 82vmin;
     margin: 0 auto;
     padding: 30px;
 }
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 4vmin;
     font-weight: bold;
 }
 

@@ -1,14 +1,18 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 from board import Board
 
 from flask_cors import CORS, cross_origin
 app = Flask(__name__,
             static_url_path='',
-            static_folder = "../frontend/build")
-            
+            static_folder = '../frontend/build')
+
 # CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 import sys
+
+@app.route("/")
+def index():
+    return redirect('/index.html')
 
 @app.route('/next-move', methods=['POST','GET'])
 @cross_origin()
