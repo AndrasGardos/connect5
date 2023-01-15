@@ -2,9 +2,12 @@ from flask import Flask, request, jsonify
 from board import Board
 
 from flask_cors import CORS, cross_origin
-app = Flask(__name__)
-CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+app = Flask(__name__,
+            static_url_path='',
+            static_folder = "../frontend/build")
+            
+# CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
 import sys
 
 @app.route('/next-move', methods=['POST','GET'])
@@ -26,5 +29,6 @@ def nextMove():
         })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run()
 
