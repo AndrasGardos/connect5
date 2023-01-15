@@ -1,0 +1,47 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    grid-template-rows: repeat(10, 60px);
+    gap: 1.1px;
+    width: 620px;
+    height: 620px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.box {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box-x{
+    background-color: #ccf;
+    animation: flash-x 0.5s ease-in;
+}
+
+.box-o{
+    background-color: #fcc;
+    animation: flash-o 0.5s ease-in;
+}
+
+@keyframes flash-x {
+    0% {
+        background-color: #00f;
+    }
+    100% {
+        background-color: #ccf;
+    }
+}
+
+@keyframes flash-o {
+    0% {
+        background-color: #f00;
+    }
+    100% {
+        background-color: #fcc;
+    }
+}
